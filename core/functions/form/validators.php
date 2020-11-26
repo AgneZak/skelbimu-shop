@@ -124,16 +124,18 @@ function validate_is_number(string $field_input, array &$field): bool
     return false;
 }
 
-function validate_number_of_symbols(string $field_input, array &$field): bool
+function validate_number_of_symbols(string $field_input, array &$field, array $params): bool
 {
-    if (strlen($field_input) > 4) {
-        $field['error'] = 'Turite panaudoti iki 4 simboliu';
-
+    if (strlen($field_input) > $params['max']) {
+        $field['error'] = strtr('Turi panaudoti iki @max simboliu', [
+            '@max' => $params['max']
+        ]);
         return false;
     }
 
     return true;
 }
+
 
 function validate_is_numeric(string $field_input, array &$field): bool
 {

@@ -108,7 +108,7 @@ if ($clean_inputs) {
         $user_key = is_logged_user();
         $rows = file_to_array(DB_FILE);
 
-        $rows['items'][] = $clean_inputs + ['email' => $_SESSION['email']];
+        $rows['items'][] = $clean_inputs + ['email' => $_SESSION['email'] , 'id' => uniqid()];
         $rows['users'][$user_key]['items'] += 1;
 
         array_to_file($rows, DB_FILE);

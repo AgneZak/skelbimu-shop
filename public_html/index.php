@@ -6,6 +6,17 @@ $nav = nav();
 
 $products_array = file_to_array(DB_FILE);
 $products = $products_array['items'] ?? [];
+
+if (is_logged_in()) {
+    $products = [];
+
+    foreach ($products_array['items'] as $items) {
+        if ($items['email'] !== $_SESSION['email']) {
+            $products[] = $items;
+        }
+    }
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -25,15 +36,23 @@ $products = $products_array['items'] ?? [];
         <section class="grid-container">
             <?php if ($products == []): ?>
                 <h2>List is empty</h2>
-            <?php else: ?>
+            <?php else : ?>
+
                 <?php foreach ($products as $product) : ?>
                     <div class="grid-item">
                         <h4><?php print $product['name']; ?></h4>
                         <img class="product-img" src="<?php print $product['img']; ?>" alt="">
                         <p><?php print $product['descrip']; ?></p>
                         <p><?php print $product['price']; ?> $</p>
+                        <?php if (is_logged_in()) :?>
+                            <form method="POST" action="/pvm.php">
+                                <input type="hidden" name="id" value="<?php print $product['id']; ?>">
+                                <button type="submit">Buy this thing</button>
+                            </form>
+                        <?php endif; ?>
                     </div>
                 <?php endforeach; ?>
+
             <?php endif; ?>
         </section>
     </article>

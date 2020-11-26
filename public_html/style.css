@@ -130,3 +130,8 @@ li a:hover:not(.active) {
     object-position: center;
     object-fit: cover;
 }
+
+.butt{
+    border: 1px solid grey;
+    cursor: pointer;
+}

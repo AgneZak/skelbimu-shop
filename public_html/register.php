@@ -69,13 +69,29 @@ $form = [
                 ]
             ]
         ],
+        'tel_number' => [
+            'label' => 'Telephone number',
+            'type' => 'number',
+            'validators' => [
+                'validate_field_not_empty',
+                'validate_is_numeric'
+            ],
+            'extra' => [
+                'attr' => [
+                    'placeholder' => 'Telephone number',
+                    'class' => 'input-field'
+                ]
+            ]
+        ],
         'password' => [
             'label' => 'Password',
             'type' => 'password',
             'validators' => [
                 'validate_field_not_empty',
                 'validate_is_number',
-                'validate_number_of_symbols'
+                'validate_number_of_symbols' =>[
+                        'max' => 4
+                ]
             ],
             'extra' => [
                 'attr' => [
