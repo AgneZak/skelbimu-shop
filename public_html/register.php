@@ -12,16 +12,44 @@ $form = [
         'method' => 'POST'
     ],
     'fields' => [
-        'username' => [
-            'label' => 'Username',
+        'name' => [
+            'label' => 'Name',
             'type' => 'text',
             'validators' => [
                 'validate_field_not_empty',
-                'validate_is_number'
+                'validate_no_numbers'
             ],
             'extra' => [
                 'attr' => [
-                    'placeholder' => 'Nickname',
+                    'placeholder' => 'Name',
+                    'class' => 'input-field'
+                ]
+            ]
+        ],
+        'surname' => [
+            'label' => 'Surname',
+            'type' => 'text',
+            'validators' => [
+                'validate_field_not_empty',
+                'validate_no_numbers'
+            ],
+            'extra' => [
+                'attr' => [
+                    'placeholder' => 'Surname',
+                    'class' => 'input-field'
+                ]
+            ]
+        ],
+        'address' => [
+            'label' => 'Address',
+            'type' => 'text',
+            'validators' => [
+                'validate_field_not_empty',
+                'validate_no_numbers'
+            ],
+            'extra' => [
+                'attr' => [
+                    'placeholder' => 'Address',
                     'class' => 'input-field'
                 ]
             ]
@@ -46,7 +74,8 @@ $form = [
             'type' => 'password',
             'validators' => [
                 'validate_field_not_empty',
-                'validate_six_symbols'
+                'validate_is_number',
+                'validate_number_of_symbols'
             ],
             'extra' => [
                 'attr' => [

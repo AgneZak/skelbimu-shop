@@ -124,10 +124,10 @@ function validate_is_number(string $field_input, array &$field): bool
     return false;
 }
 
-function validate_six_symbols(string $field_input, array &$field): bool
+function validate_number_of_symbols(string $field_input, array &$field): bool
 {
-    if (strlen($field_input) < 6) {
-        $field['error'] = 'Turite panaudoti bent 6 simbolius';
+    if (strlen($field_input) > 4) {
+        $field['error'] = 'Turite panaudoti iki 4 simboliu';
 
         return false;
     }
@@ -142,6 +142,22 @@ function validate_is_numeric(string $field_input, array &$field): bool
 
     }
     $field['error'] = 'Naudok skaicius - uz zodi negyvensi';
+
+    return false;
+}
+
+
+function validate_no_numbers(string $field_input, array &$field): bool
+{
+    $field_values_array = str_split($field_input);
+
+    foreach ($field_values_array as $value) {
+        if (!is_numeric($value)) {
+            return true;
+        }
+    }
+
+    $field['error'] = 'Turite nenaudoti skaiciu';
 
     return false;
 }
