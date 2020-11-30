@@ -1,1 +1,92 @@
-{"users":[{"name":"test","surname":"test","address":"Dernford Farm","email":"test@test.lt","tel_number":"131424","password":"tes1","items":3},{"name":"Labas","surname":"Krabas","address":"Krabo gatve","email":"labas@krabas.lt","tel_number":"242525","password":"lab1","items":1,"purchased":[{"name":"test test","price":"2482572","img":"https:\/\/ak1.ostkcdn.com\/images\/products\/23591578\/Mens-The-Floor-Is-Lava-Socks-Funny-Footwear-For-Guys-22c31806-51c7-4b32-9e6a-177d0d37731c.jpgg","descrip":"rgr","contact":"labaskrabas","email":"test@test.lt","id":"5fc5019504eec"}]}],"items":[{"name":"testin","price":"444","img":"https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61MJ6mgerCL._AC_UX385_.jpg","descrip":"lab","contact":"tes666","email":"test@test.lt","id":"5fc5024d506f1"},{"name":"tetete","price":"11","img":"https:\/\/ak1.ostkcdn.com\/images\/products\/23591578\/Mens-The-Floor-Is-Lava-Socks-Funny-Footwear-For-Guys-22c31806-51c7-4b32-9e6a-177d0d37731c.jpg","descrip":"en","contact":"tes666","email":"test@test.lt","id":"5fc50257a4c9f"},{"name":"test test krab","price":"242","img":"https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61MJ6mgerCL._AC_UX385_.jpg","descrip":"faf","contact":"labaskrabas","email":"labas@krabas.lt","id":"5fc5027c6c4bb"}]}
+{
+  "users": [
+    {
+      "name": "test",
+      "surname": "test",
+      "address": "Dernford Farm",
+      "email": "test@test.lt",
+      "tel_number": "131424",
+      "password": "tes1",
+      "items": 0,
+      "purchased": [
+        {
+          "name": "test test krab",
+          "price": "242",
+          "img": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61MJ6mgerCL._AC_UX385_.jpg",
+          "descrip": "faf",
+          "contact": "labaskrabas",
+          "email": "labas@krabas.lt",
+          "id": "5fc5027c6c4bb"
+        }
+      ]
+    },
+    {
+      "name": "Labas",
+      "surname": "Krabas",
+      "address": "Krabo gatve",
+      "email": "labas@krabas.lt",
+      "tel_number": "242525",
+      "password": "lab1",
+      "items": 0,
+      "purchased": [
+        {
+          "name": "test test",
+          "price": "2482572",
+          "img": "https:\/\/ak1.ostkcdn.com\/images\/products\/23591578\/Mens-The-Floor-Is-Lava-Socks-Funny-Footwear-For-Guys-22c31806-51c7-4b32-9e6a-177d0d37731c.jpgg",
+          "descrip": "rgr",
+          "contact": "labaskrabas",
+          "email": "test@test.lt",
+          "id": "5fc5019504eec"
+        },
+        {
+          "name": "tetete",
+          "price": "11",
+          "img": "https:\/\/ak1.ostkcdn.com\/images\/products\/23591578\/Mens-The-Floor-Is-Lava-Socks-Funny-Footwear-For-Guys-22c31806-51c7-4b32-9e6a-177d0d37731c.jpg",
+          "descrip": "en",
+          "contact": "tes666",
+          "email": "test@test.lt",
+          "id": "5fc50257a4c9f"
+        },
+        {
+          "name": "testin",
+          "price": "444",
+          "img": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61MJ6mgerCL._AC_UX385_.jpg",
+          "descrip": "lab",
+          "contact": "tes666",
+          "email": "test@test.lt",
+          "id": "5fc5024d506f1"
+        },
+        {
+          "name": "test test",
+          "price": "11",
+          "img": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/61MJ6mgerCL._AC_UX385_.jpg",
+          "descrip": "ccc",
+          "contact": "labaskrabas",
+          "email": "test@test.lt",
+          "id": "5fc507b9d1f1c"
+        },
+        {
+          "name": "test test",
+          "price": "22",
+          "img": "https:\/\/ak1.ostkcdn.com\/images\/products\/23591578\/Mens-The-Floor-Is-Lava-Socks-Funny-Footwear-For-Guys-22c31806-51c7-4b32-9e6a-177d0d37731c.jpg",
+          "descrip": "fewf",
+          "contact": "tes666",
+          "email": "test@test.lt",
+          "id": "5fc507d48da0b"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "name": "test test",
+      "price": "22",
+      "img": "https:\/\/ak1.ostkcdn.com\/images\/products\/23591578\/Mens-The-Floor-Is-Lava-Socks-Funny-Footwear-For-Guys-22c31806-51c7-4b32-9e6a-177d0d37731c.jpg",
+      "descrip": "fewf",
+      "contact": "tes666",
+      "email": "test@test.lt",
+      "id": "5fc507d48da0b",
+      "disabled": "true"
+    }
+  ]
+}

@@ -23,6 +23,15 @@ foreach ($rows['items'] ?? [] as $items) {
 if (isset($_POST['id']) && $_POST['id'] == 'PIRKTI') {
     foreach ($rows['users'][$user_key]['cart'] ?? [] as $items) {
         $rows['users'][$user_key]['purchased'][] = $items;
+        foreach ($rows['users'] as $seller_key => $seller) {
+            if ($items['email'] === $seller['email']){
+                var_dump($seller['email']);
+
+                $rows['users'][$seller_key]['items'] -= 1;
+
+            }
+
+        }
         unset($rows['users'][$user_key]['cart']);
     }
 
@@ -32,16 +41,9 @@ if (isset($_POST['id']) && $_POST['id'] == 'PIRKTI') {
                 unset($rows['items'][$key]);
                 $rows['items'] = array_values($rows['items']);
             }
-
-            foreach ($rows['users'] as $seller_key => $seller) {
-                if ($seller['email'] == $rows['users'][$user_key]['purchased'][$i]['email']) {
-                    var_dump($items);
-
-//                    $rows['users'][$seller_key]['items'] = ;
-                }
-            }
         }
     }
+
 
 
     array_to_file($rows, DB_FILE);
