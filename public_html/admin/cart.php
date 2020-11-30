@@ -25,14 +25,11 @@ if (is_logged_in()) {
         $total += $product['price'];
     }
 
-
     $h3 = 'Jusu krepselis' . ' ' . $_SESSION['email'];
 } else {
     header("Location: /login.php");
     exit();
 }
-
-
 
 ?>
 <!doctype html>
