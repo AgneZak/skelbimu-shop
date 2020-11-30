@@ -10,7 +10,7 @@ $products = $products_array['items'] ?? [];
 if (is_logged_in()) {
     $products = [];
 
-    foreach ($products_array['items'] as $items) {
+    foreach ($products_array['items'] ?? [] as $items) {
         if ($items['email'] !== $_SESSION['email']) {
             $products[] = $items;
         }
@@ -44,8 +44,8 @@ if (is_logged_in()) {
                         <img class="product-img" src="<?php print $product['img']; ?>" alt="">
                         <p><?php print $product['descrip']; ?></p>
                         <p><?php print $product['price']; ?> $</p>
-                        <?php if (is_logged_in()) :?>
-                            <form method="POST" action="/pvm.php">
+                        <?php if (!isset($product['disabled'])) :?>
+                            <form method="POST" action="/admin/cart.php">
                                 <input type="hidden" name="id" value="<?php print $product['id']; ?>">
                                 <button type="submit">Buy this thing</button>
                             </form>

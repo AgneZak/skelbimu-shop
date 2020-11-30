@@ -16,6 +16,7 @@ function nav(): array
         return $nav + [
             '/admin/add.php' => 'Add Stuff',
             '/admin/my.php' => 'My Stuff',
+            '/admin/cart.php' => 'My Order',
             '/logout.php' => 'Logout',
         ];
     } else {

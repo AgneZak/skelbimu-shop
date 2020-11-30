@@ -135,3 +135,15 @@ li a:hover:not(.active) {
     border: 1px solid grey;
     cursor: pointer;
 }
+
+.requisite{
+    display: flex;
+    justify-content: space-between;
+}
+.contacts{
+    width: 300px;
+}
+.contacts p{
+    padding-bottom: 5px;
+    border-bottom: 1px solid tomato;
+}

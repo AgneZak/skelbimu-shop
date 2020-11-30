@@ -12,7 +12,7 @@ function is_logged_in(): bool
 
         $data = file_to_array(DB_FILE);
 
-        foreach ($data['users'] as $entry) {
+        foreach ($data['users'] ?? [] as $entry) {
             if ($_SESSION['email'] === $entry['email'] &&
                 $_SESSION['password'] === $entry['password']) {
 
@@ -50,7 +50,7 @@ function is_logged_user()
 
         $data = file_to_array(DB_FILE);
 
-        foreach ($data['users'] as $key => $entry) {
+        foreach ($data['users'] ?? [] as $key => $entry) {
             if ($_SESSION['email'] === $entry['email'] &&
                 $_SESSION['password'] === $entry['password']) {
 
