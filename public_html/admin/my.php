@@ -25,7 +25,6 @@ if (isset($_POST['id']) && $_POST['id'] == 'PIRKTI') {
         $rows['users'][$user_key]['purchased'][] = $items;
         foreach ($rows['users'] as $seller_key => $seller) {
             if ($items['email'] === $seller['email']){
-                var_dump($seller['email']);
 
                 $rows['users'][$seller_key]['items'] -= 1;
 
